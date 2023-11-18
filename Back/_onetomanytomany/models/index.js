@@ -1,16 +1,21 @@
-const MMFirst = require('./first')
-const MMSecond = require('./second')
-const MMThird = require('./third')
+const OTOTMFirst = require('./first')
+const OTOTMSecond = require('./second')
+const OTOTMThird = require('./third')
+const OTOTMFourth = require('./fourth')
 
 const { sequelize } = require('../util/db')
 
-MMFirst.belongsToMany(MMSecond, {through: MMThird})
-MMSecond.belongsToMany(MMFirst, {through: MMThird})
+OTOTMFirst.hasMany(OTOTMFourth)
+OTOTMFourth.belongsTo(OTOTMFirst)
+
+OTOTMSecond.belongsToMany(OTOTMFourth, {through: OTOTMThird})
+OTOTMFourth.belongsToMany(OTOTMSecond, {through: OTOTMThird})
 
 sequelize.sync()
 //Probably need to figure out to many or whatever
 module.exports = {
-    MMFirst,
-    MMSecond,
-    MMThird
+    OTOTMFirst,
+    OTOTMSecond,
+    OTOTMThird,
+    OTOTMFourth
 }

@@ -11,6 +11,12 @@ M T M(
     Do we need one??
 )
 
+O T M T M
+Special === manip Fourth
+    First   O T M   Fourth
+    Second  M T M   Fourth
+(skipped put as its the same as above)
+
 
 Needs
 
@@ -20,14 +26,10 @@ Needs
 M T O 
 
 
-O T M T M
-Special === manip Fourth
-    First   O T M   Fourth
-    Second  M T M   Fourth
-
 
 
 O T O T M
-Special === manip TARGET
-    First   O T M   TARGET
-    Second  O T M   TARGET    
+Special === manip Fourth
+    First   O T M   Fourth
+    Second  O T M   Fourth    
+

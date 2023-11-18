@@ -1,13 +1,13 @@
 const bcrypt = require('bcrypt')
 const router = require('express').Router()
 
-const {MMSecond, MMFirst} = require('../models')
+const {OTOTMSecond, OTOTMFourth} = require('../models')
 const { tokenExtractor, isAdmin } = require('../util/middleware')
 
 //Get all users address if admin
 router.get('/', async (req, res) => {
-    const second = await MMSecond.findAll({ 
-      include: MMFirst
+    const second = await OTOTMSecond.findAll({ 
+      include: OTOTMFourth
     })
     res.json(second)
   })
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 //  Add address to user if user exists and only to matched token to user
   router.post('/', async (req, res) => {
     try {
-      const second = await MMSecond.create({...req.body})
+      const second = await OTOTMSecond.create({...req.body})
       res.json(second)
     } catch(error) {
       return res.status(400).json({ error })
@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
 // Changes Address information if admin or address id and user match
 router.put('/:secondId',  async (req, res) => {
   try{
-    const second = await MMSecond.findOne({
+    const second = await OTOTMSecond.findOne({
       where: { 
         id: req.params.secondId
       }
@@ -43,7 +43,7 @@ router.put('/:secondId',  async (req, res) => {
 //Delete with either admin or id matching address
 router.delete('/:secondId', async (req, res) => {
     try {
-      const second = await MMSecond.findOne({
+      const second = await OTOTMSecond.findOne({
         where: { 
           id: req.params.secondId
         }

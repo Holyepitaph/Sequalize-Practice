@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize')
 
 const { sequelize } = require('../util/db')
 
-class MMSecond extends Model {}
+class OTOTMSecond extends Model {}
 
-MMSecond.init({
+OTOTMSecond.init({
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -19,7 +19,7 @@ MMSecond.init({
   sequelize,
   underscored: true,
   timestamps: true,
-  modelName: 'MMSecond'
+  modelName: 'OTOTMSecond'
 })
 
-module.exports = MMSecond
+module.exports = OTOTMSecond

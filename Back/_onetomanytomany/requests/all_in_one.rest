@@ -8,6 +8,12 @@ GET http://localhost:3001/api/second
 ###
 GET http://localhost:3001/api/third
 ###
+###
+GET http://localhost:3001/api/fourth
+###
+
+
+
 
 
 ###
@@ -31,9 +37,18 @@ Post http://localhost:3001/api/third
 Content-Type: application/json
 
 {
-    "MMFirstId": 4,
-    "MMSecondId": 7
+    "OTOTMFourthId": 1,
+    "OTOTMSecondId": 1
 }
+###
+Post http://localhost:3001/api/fourth
+Content-Type: application/json
+
+{
+    "OTOTMFirstId": 1
+}
+
+
 
 
 
@@ -59,7 +74,7 @@ PUT  http://localhost:3001/api/third
 Content-Type: application/json
  
 {
-    "MMFirstId": 5
+    "OTOTMFirstId": 5
 }
 ###
 ###
@@ -67,9 +82,20 @@ PUT  http://localhost:3001/api/third
 Content-Type: application/json
  
 {
-    "MMSecondId": 5
+    "OTOTMSecondId": 5
 }
 ###
+###
+PUT  http://localhost:3001/api/fourth
+Content-Type: application/json
+ 
+{
+    "OTOTMSecondId": 5
+}
+###
+
+
+
 
 
 ###
@@ -85,6 +111,14 @@ DELETE http://localhost:3001/api/third
 Content-Type: application/json
 
 {
-    "MMFirstId": 2,
-    "MMSecondId": 6
+    "OTOTMFourthId": 2,
+    "OTOTMSecondId": 6
+}
+###
+DELETE http://localhost:3001/api/fourth
+Content-Type: application/json
+
+{
+    "OTOTMFirstId": 2,
+    "OTOTMSecondId": 6
 }

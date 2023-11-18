@@ -1,0 +1,90 @@
+
+###
+//                                  GET  
+###
+GET http://localhost:3001/api/first
+###
+GET http://localhost:3001/api/second
+###
+GET http://localhost:3001/api/third
+###
+
+
+###
+//                                    POST
+###
+Post http://localhost:3001/api/first
+Content-Type: application/json
+
+{
+  "quantity": "String for Some"
+}
+###
+Post http://localhost:3001/api/second
+Content-Type: application/json
+
+{
+    "quantity": 1
+}
+###
+Post http://localhost:3001/api/third
+Content-Type: application/json
+
+{
+    "MMFirstId": 4,
+    "MMSecondId": 7
+}
+
+
+
+###
+//                                  PUT
+###
+PUT http://localhost:3001/api/first/1
+Content-Type: application/json
+ 
+{
+    "quantity": "My Guys"
+}
+###
+PUT  http://localhost:3001/api/second/3
+Content-Type: application/json
+ 
+{
+    "quantity": 2
+}
+###
+###
+PUT  http://localhost:3001/api/third
+Content-Type: application/json
+ 
+{
+    "MMFirstId": 5
+}
+###
+###
+PUT  http://localhost:3001/api/third
+Content-Type: application/json
+ 
+{
+    "MMSecondId": 5
+}
+###
+
+
+###
+//                                  DELETE
+###
+DELETE  http://localhost:3001/api/first/1
+Content-Type: application/json
+###
+DELETE http://localhost:3001/api/second/1
+Content-Type: application/json
+###
+DELETE http://localhost:3001/api/third
+Content-Type: application/json
+
+{
+    "MMFirstId": 2,
+    "MMSecondId": 6
+}

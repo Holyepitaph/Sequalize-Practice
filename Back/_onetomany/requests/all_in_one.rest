@@ -1,0 +1,59 @@
+
+###
+//                                  GET  
+###
+GET http://localhost:3001/api/first
+###
+GET http://localhost:3001/api/second
+###
+
+
+
+###
+//                                    POST
+###
+Post http://localhost:3001/api/first
+Content-Type: application/json
+
+{
+  "quantity": "String for Some"
+}
+###
+Post http://localhost:3001/api/second/2
+Content-Type: application/json
+
+{
+    "quantity": 1
+}
+
+
+
+###
+//                                  PUT
+###
+PUT http://localhost:3001/api/first/1
+Content-Type: application/json
+ 
+{
+    "quantity": "My Guy"
+}
+###
+PUT  http://localhost:3001/api/second/3
+Content-Type: application/json
+ 
+{
+    "quantity": 2
+}
+###
+
+
+
+###
+//                                  DELETE
+###
+DELETE  http://localhost:3001/api/first/2
+Content-Type: application/json
+###
+DELETE http://localhost:3001/api/second/4
+Content-Type: application/json
+

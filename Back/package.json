@@ -1,0 +1,29 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testing.js",
+  "scripts": {
+    "dev": "nodemon testing.js",
+    "devOO": "nodemon ./_onetoone/index.js",
+    "devOM": "nodemon ./_onetomany/index.js",
+    "devMM": "nodemon ./_manytomany/index.js",
+    "devOOM": "nodemon ./_onetoonetomany/index.js",
+    "devOMM": "nodemon ./_onetomanytomany/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.3",
+    "sequelize": "^6.35.0",
+    "umzug": "^3.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
